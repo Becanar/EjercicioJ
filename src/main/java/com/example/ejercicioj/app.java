@@ -17,7 +17,7 @@ public class app extends Application {
        // scene.getStylesheets().add(getClass().getResource("/org/example/ejercicioi/style/style.css").toExternalForm());
         stage.setResizable(false);
         stage.setWidth(679);
-        stage.setHeight(593);
+        stage.setHeight(620);
         try {
             Image img = new Image(getClass().getResource("/com/example/ejercicioj/images/Cooper.png").toString());
             stage.getIcons().add(img);
