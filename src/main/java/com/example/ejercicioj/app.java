@@ -11,10 +11,8 @@ import java.io.IOException;
 public class app extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-
         FXMLLoader fxmlLoader = new FXMLLoader(app.class.getResource("/com/example/ejercicioj/hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-       // scene.getStylesheets().add(getClass().getResource("/org/example/ejercicioi/style/style.css").toExternalForm());
         stage.setResizable(false);
         stage.setWidth(679);
         stage.setHeight(620);
@@ -30,7 +28,7 @@ public class app extends Application {
         stage.show();
     }
     /**
-     * Método main que lanza la aplicación.
+     * Método main que lanza la aplicación.a
      * @param args Argumentos de la línea de comandos.
      */
     public static void main(String[] args) {
