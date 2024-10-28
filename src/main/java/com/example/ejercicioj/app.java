@@ -7,8 +7,18 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * Clase principal de la aplicación MINI COOPER, que extiende {@link Application} para iniciar la interfaz gráfica.
+ * La clase carga el archivo FXML, configura la escena, la ventana principal y añade un ícono.
+ */
 public class app extends Application {
+
+    /**
+     * Método start, que inicializa y muestra la ventana principal de la aplicación.
+     *
+     * @param stage El escenario principal en el que se mostrará la interfaz.
+     * @throws IOException Si hay un error al cargar el archivo FXML.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(app.class.getResource("/com/example/ejercicioj/hello-view.fxml"));

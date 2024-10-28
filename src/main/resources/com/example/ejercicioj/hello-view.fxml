@@ -32,7 +32,7 @@
                </HBox.margin></Label>
          </children>
       </HBox>
-      <ImageView fx:id="imgLuces" onMouseClicked="#toggleLuces" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgLuces" onMouseClicked="#cambiarLuces" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/lucesOff.png" />
          </image>

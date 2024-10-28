@@ -9,6 +9,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
+/**
+ * Controlador para la interfaz gráfica de la aplicación MINI COOPER.
+ * Esta clase maneja la lógica de interacción de la vista definida en el archivo FXML.
+ */
 public class miniController {
 
     @FXML
@@ -37,13 +41,20 @@ public class miniController {
     @FXML
     private ToggleButton btRojo, btAzulC, btAzulO, btNegro, btGris, btBeis, btGrisO, btnVolcaninOrange;
 
+    /**
+     * Inicializa el controlador y establece el estado inicial de los elementos de la interfaz.
+     */
     @FXML
     public void initialize() {
         btRojo.setSelected(true);
         cambiarColor();
     }
+
+    /**
+     * Cambia la visibilidad de las luces del coche y actualiza la imagen de los íconos de luces.
+     */
     @FXML
-    private void toggleLuces() {
+    private void cambiarLuces() {
         imgLuz.setVisible(!imgLuz.isVisible());
         if (imgLuz.isVisible()) {
             imgLuces.setImage(new Image(getClass().getResourceAsStream("/com/example/ejercicioj/images/lucesOn.png")));
@@ -51,6 +62,10 @@ public class miniController {
             imgLuces.setImage(new Image(getClass().getResourceAsStream("/com/example/ejercicioj/images/lucesOff.png")));
         }
     }
+    /**
+     * Cambia el color del coche según el ToggleButton seleccionado.
+     * Se actualiza la imagen del coche en función del color elegido.
+     */
     @FXML
     private void cambiarColor() {
         if (btRojo.isSelected()) {
