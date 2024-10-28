@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="679.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejercicioj.miniController">
+   <children>
+      <HBox fx:id="panelNorte" alignment="CENTER" prefHeight="100.0" style="-fx-background-color: BLACK;">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="73.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/cooperLogo.png"/>
+               </image>
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="lblConf" prefHeight="27.0" prefWidth="258.0" text="CONFIGURA TU MINI COPPER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </HBox.margin></Label>
+         </children>
+      </HBox>
+      <ImageView fx:id="imgLuces" onMouseClicked="#cambiarLuces" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/lucesOff.png" />
+         </image>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </ImageView>
+      <StackPane fx:id="panelCentro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <children>
+            <ImageView fx:id="imgCoche" fitHeight="386.0" fitWidth="707.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/coches/miniBlazingRed.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgLuz" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/autoLuz.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <HBox fx:id="panelLbl" alignment="CENTER">
+         <children>
+            <Label fx:id="lblSelecciona" contentDisplay="CENTER" text="Selecciona tu color favorito" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <HBox fx:id="panelColores" prefHeight="72.0" prefWidth="679.0" spacing="20.0">
+         <children>
+            <ToggleButton fx:id="btRojo" mnemonicParsing="false" onMouseClicked="#cambiarColor" selected="true" style="-fx-background-color: black;">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grupoColores" />
+               </toggleGroup>
+               <graphic>
+                  <ImageView fx:id="imgRojo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/colores/colorBlazingRed.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="btAzulC" mnemonicParsing="false" onMouseClicked="#cambiarColor" style="-fx-background-color: black;" toggleGroup="$grupoColores">
+               <graphic>
+                  <ImageView fx:id="imgAzulC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/colores/colorElectricBlue.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="btAzulO" mnemonicParsing="false" onMouseClicked="#cambiarColor" style="-fx-background-color: black;" toggleGroup="$grupoColores">
+               <graphic>
+                  <ImageView fx:id="imgAzulO" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/colores/colorLapisluxuryBlue.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="btNegro" mnemonicParsing="false" onMouseClicked="#cambiarColor" style="-fx-background-color: black;" toggleGroup="$grupoColores">
+               <graphic>
+                  <ImageView fx:id="imgNegro" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/colores/colorMidnightBlack.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="btGris" mnemonicParsing="false" onMouseClicked="#cambiarColor" style="-fx-background-color: black;" toggleGroup="$grupoColores">
+               <graphic>
+                  <ImageView fx:id="imgGris" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/colores/colorMoonwalkGrey.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="btBeis" mnemonicParsing="false" onMouseClicked="#cambiarColor" style="-fx-background-color: black;" toggleGroup="$grupoColores">
+               <graphic>
+                  <ImageView fx:id="imgBeis" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/colores/colorPepperWhite.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="btGrisO" mnemonicParsing="false" onMouseClicked="#cambiarColor" style="-fx-background-color: black;" toggleGroup="$grupoColores">
+               <graphic>
+                  <ImageView fx:id="imgGrisO" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/colores/colorThunderGray.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="btnVolcaninOrange" mnemonicParsing="false" onMouseClicked="#cambiarColor" style="-fx-background-color: black;" toggleGroup="$grupoColores">
+               <graphic>
+                  <ImageView fx:id="imgAmarillo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/colores/colorVolcaninOrange.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
